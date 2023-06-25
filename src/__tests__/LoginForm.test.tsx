@@ -101,7 +101,6 @@ describe('Login Form', () => {
   })
 
   it('Should mock DisplayFormValues', () => {
-    screen.debug()
     expect(screen.getByText(/Mocked DisplayFormValues/i)).toBeInTheDocument()
   })
 })
