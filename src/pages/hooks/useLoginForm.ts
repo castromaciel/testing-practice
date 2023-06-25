@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+import { callEndpoint } from '../../services'
 import { loginSchema } from '../schemas'
 
 const useLoginForm = () => {
@@ -14,7 +15,9 @@ const useLoginForm = () => {
   } = methods
 
   const onSubmit = async (data: any) => {
-    console.log(data)
+    const result = await callEndpoint(data)
+    console.log({ result })
+    reset()
   }
 
   const usernameWatch = watch('username')
