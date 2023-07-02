@@ -10,9 +10,10 @@ Print integers one-to-N
 */
 
 describe('fizzBuzz', () => {
-  it('should be a function', () => {
-    expect(typeof fizzBuzz).toBe('function')
-  })
+  // We have subsequently deactivated this test because it is redundant
+  // it('should be a function', () => {
+  //   expect(typeof fizzBuzz).toBe('function')
+  // })
 
   it('should throw if not number is provided as parameter', () => {
     expect(() => fizzBuzz()).toThrow()
@@ -34,13 +35,32 @@ describe('fizzBuzz', () => {
     expect(fizzBuzz(2)).toBe(2)
   })
 
-  it('Should return \'Fizz\' if 3 is provided as parameter', () => {
+  it('Should return "Fizz" if 3 is provided as parameter', () => {
     expect(fizzBuzz(3)).toBe('Fizz')
   })
 
-  it('Should return \'Fizz\' if number provided is multiple of 3', () => {
+  it('Should return "Fizz" if number provided is multiple of 3', () => {
     expect(fizzBuzz(6)).toBe('Fizz')
+    expect(fizzBuzz(9)).toBe('Fizz')
     expect(fizzBuzz(12)).toBe('Fizz')
-    expect(fizzBuzz(30)).toBe('Fizz')
+  })
+
+  // This test is already covered in the algorithm
+  // it('Should return 4 if number provided is 4', () => {
+  //   expect(fizzBuzz(4)).toBe(4)
+  // })
+
+  it('Should return "Buzz" if number provided is 5', () => {
+    expect(fizzBuzz(5)).toBe('Buzz')
+  })
+
+  it('Should return "Buzz" if number provided is multiple of 5', () => {
+    expect(fizzBuzz(10)).toBe('Buzz')
+    expect(fizzBuzz(20)).toBe('Buzz')
+  })
+
+  it('Should return "FizzBuzz" if number provided is multiple of 15', () => {
+    expect(fizzBuzz(15)).toBe('FizzBuzz')
+    expect(fizzBuzz(30)).toBe('FizzBuzz')
   })
 })
