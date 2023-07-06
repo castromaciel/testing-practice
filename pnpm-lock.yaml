@@ -90,6 +90,9 @@ devDependencies:
   eslint-plugin-react-hooks:
     specifier: ^4.3.0
     version: 4.3.0(eslint@8.2.0)
+  happy-dom:
+    specifier: ^10.0.3
+    version: 10.0.3
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -110,7 +113,7 @@ devDependencies:
     version: 4.0.0(@types/node@18.7.6)(sass@1.54.4)
   vitest:
     specifier: ^0.29.8
-    version: 0.29.8(jsdom@22.1.0)(sass@1.54.4)
+    version: 0.29.8(happy-dom@10.0.3)(jsdom@22.1.0)(sass@1.54.4)
 
 packages:
 
@@ -1301,7 +1304,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.29.8(jsdom@22.1.0)(sass@1.54.4)
+      vitest: 0.29.8(happy-dom@10.0.3)(jsdom@22.1.0)(sass@1.54.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2726,6 +2729,17 @@ packages:
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+    dev: true
+
+  /happy-dom@10.0.3:
+    resolution: {integrity: sha512-WkCP+Z5fX6U5PY+yHP3ElV5D9PoxRAHRWPFq3pG9rg/6Hjf5ak7dozAgSCywsTRUq2qfa8vV8OQvUy5pRXy8EQ==}
+    dependencies:
+      css.escape: 1.5.1
+      entities: 4.5.0
+      iconv-lite: 0.6.3
+      webidl-conversions: 7.0.0
+      whatwg-encoding: 2.0.0
+      whatwg-mimetype: 3.0.0
     dev: true
 
   /has-bigints@1.0.2:
@@ -4502,7 +4516,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest@0.29.8(jsdom@22.1.0)(sass@1.54.4):
+  /vitest@0.29.8(happy-dom@10.0.3)(jsdom@22.1.0)(sass@1.54.4):
     resolution: {integrity: sha512-JIAVi2GK5cvA6awGpH0HvH/gEG9PZ0a/WoxdiV3PmqK+3CjQMf8c+J/Vhv4mdZ2nRyXFw66sAg6qz7VNkaHfDQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -4545,6 +4559,7 @@ packages:
       cac: 6.7.14
       chai: 4.3.7
       debug: 4.3.4
+      happy-dom: 10.0.3
       jsdom: 22.1.0
       local-pkg: 0.4.3
       pathe: 1.1.1

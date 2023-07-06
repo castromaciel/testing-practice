@@ -6,7 +6,7 @@ export default defineConfig({
       provider: 'istanbul'
     },
     css: true,
-    environment: 'jsdom',
+    environment: 'happy-dom',
     globals: true,
     setupFiles: ['./src/__tests__/setup.ts']
   }
