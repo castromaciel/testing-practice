@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import { LoginForm } from './pages'
+import { Calculator } from './pages/Calculator/Calculator'
 
 const App = () => (
   <Box
@@ -13,6 +14,7 @@ const App = () => (
       Gentleman class - Testing
     </Typography>
     <LoginForm />
+    <Calculator />
   </Box>
 )
 

@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
     "dev": "vite",
     "preview": "vite preview",
     "start": "vite",
     "test": "vitest --run",
-    "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "test:watch": "vitest",
     "prepare": "husky install"
